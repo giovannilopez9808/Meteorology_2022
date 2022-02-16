@@ -14,6 +14,7 @@ def obtain_ticks(date: str) -> list:
 
 
 parameters = obtain_parameters()
+parameters["path graphics"] = "../Graphics/Daily/"
 files = sorted(os.listdir(parameters["path data"]))
 dates = [yyyymmdd2yyyy_mm_dd(date) for date in files]
 for date, file in zip(dates, files):

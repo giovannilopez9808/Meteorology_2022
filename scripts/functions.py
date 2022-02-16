@@ -22,3 +22,9 @@ def read_data(path: str, filename: str) -> pd.DataFrame:
                        index_col=0)
     data = format_data(data)
     return data
+
+
+def obtain_parameters() -> dict:
+    parameters = {"path data": "../Data/",
+                  "path graphics": "../Graphics/"}
+    return parameters
