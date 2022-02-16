@@ -13,11 +13,8 @@ def obtain_ticks(date: str) -> list:
     return dates
 
 
-parameters = {"path data": "../Data/",
-              "path graphics": "../Graphics/"}
-
+parameters = obtain_parameters()
 files = sorted(os.listdir(parameters["path data"]))
-files = [files[0]]
 dates = [yyyymmdd2yyyy_mm_dd(date) for date in files]
 for date, file in zip(dates, files):
     data = read_data(parameters["path data"],
